@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Fish Drawing</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87CEEB; /* Sky blue background */
+        }
+        h1 {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin-top: 20px;
+        }
+        canvas {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    
+    
+    <canvas id="fishCanvas" width="400" height="300"></canvas>
+
+    <script>
+        const canvas = document.getElementById('fishCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw fish body
+        ctx.beginPath();
+        ctx.ellipse(200, 150, 80, 40, 0, 0, Math.PI * 2); // Fish body (ellipse)
+        ctx.fillStyle = '#ff6347'; 
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw fish tail
+        ctx.beginPath();
+        ctx.moveTo(120, 150);  
+        ctx.lineTo(70, 120);   
+        ctx.lineTo(70, 180);   
+        ctx.closePath();
+        ctx.fillStyle = '#ff6347'; 
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw fish eye
+        ctx.beginPath();
+        ctx.arc(250, 140, 10, 0, Math.PI * 2, true); 
+        ctx.fillStyle = '#fff'; 
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw fish pupil
+        ctx.beginPath();
+        ctx.arc(250, 140, 5, 0, Math.PI * 2, true);
+        ctx.fillStyle = '#000'; 
+        ctx.fill();
+
+        // Draw fish mouth
+        ctx.beginPath();
+        ctx.arc(270, 160, 10, 0, Math.PI, false);  
+        ctx.stroke();
+    </script>
+</body>
+</html>
+
