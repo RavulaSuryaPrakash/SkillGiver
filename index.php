@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillLinker</title>
+    <title>SkillGiver</title>
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="script/script.js"></script>
 </head>
 <body>
     <header>
-        <h1>SkillLinker</h1>
+        <h1>SkillGiver</h1>
         <nav>
             <a href="#" data-section="home">Home</a>
             <a href="#" data-section="about">About</a>
